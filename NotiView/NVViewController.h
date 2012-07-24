@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NVViewController : UIViewController
+@interface NVViewController : UIViewController {
+    IBOutlet UISwitch *_randomcolors;
+}
 - (IBAction)test:(id)sender;
 @end

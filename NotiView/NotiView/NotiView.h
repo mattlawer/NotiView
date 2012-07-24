@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NotiView : UIView
-
+@interface NotiView : UIView {
+    UIColor *_color;
+}
+@property (nonatomic, assign) UIColor *color;
 - (id)initWithTitle:(NSString *)title detail:(NSString *)detail icon:(UIImage *)icon;
+
+- (UIColor *)lightenColor:(UIColor *)oldColor value:(float)value;
 
 @end

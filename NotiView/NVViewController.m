@@ -14,6 +14,8 @@ static CGFloat offset = 20.0;
 @interface NVViewController ()
 // UI stuff
 - (CGFloat) viewWidth;
+
+- (UIColor *)randomColor;
 - (NSString *)msgTitle;
 - (NSString *)msgDetail;
 @end
@@ -44,6 +46,9 @@ static CGFloat offset = 20.0;
 - (IBAction)test:(id)sender {
     
     NotiView *nv = [[NotiView alloc] initWithTitle:[self msgTitle] detail:[self msgDetail] icon:[UIImage imageNamed:@"icon"]];
+    if (_randomcolors.isOn) {
+        nv.color = [self randomColor];
+    }
     CGRect f = nv.frame;
     f.origin.x = [self viewWidth] - f.size.width - offset;
     f.origin.y = -f.size.height;
@@ -106,6 +111,13 @@ static CGFloat offset = 20.0;
             break;
     }
     return @"test";
+}
+
+- (UIColor *)randomColor {
+    CGFloat r = arc4random()%255;
+    CGFloat g = arc4random()%255;
+    CGFloat b = arc4random()%255;
+    return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
 }
 
 @end

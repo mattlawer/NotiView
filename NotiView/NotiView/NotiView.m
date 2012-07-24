@@ -13,6 +13,7 @@ static CGFloat defaultWidth = 300.0;
 
 
 @implementation NotiView
+@synthesize color = _color;
 
 - (id)initWithTitle:(NSString *)title detail:(NSString *)detail icon:(UIImage *)icon
 {
@@ -26,6 +27,8 @@ static CGFloat defaultWidth = 300.0;
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
+        _color = [[UIColor blackColor] retain];
+        
         UIImageView *_icon = [[UIImageView alloc] initWithFrame:CGRectMake(20.0, 22.0, 50.0, 50.0)];
         _icon.clipsToBounds = YES;
         _icon.layer.cornerRadius = 8.0;
@@ -59,6 +62,12 @@ static CGFloat defaultWidth = 300.0;
     return self;
 }
 
+- (void) setColor:(UIColor *)color {
+    [_color release]; _color = nil;
+    _color = [color retain];
+    [self setNeedsDisplay];
+}
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -67,15 +76,13 @@ static CGFloat defaultWidth = 300.0;
     // Drawing code
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGFloat alpha = 0.6;
-    
+        
     //// Colors
-    UIColor* grayshadow = [UIColor colorWithRed: 0.61 green: 0.65 blue: 0.69 alpha: alpha];
-    UIColor* border = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: alpha];
-    UIColor* topColor = [UIColor colorWithRed: 0.37 green: 0.37 blue: 0.37 alpha: alpha];
-    UIColor* midColor = [UIColor colorWithRed: 0.1 green: 0.1 blue: 0.1 alpha: alpha];
-    UIColor* bottomColor = [UIColor colorWithRed: 0.12 green: 0.12 blue: 0.12 alpha: alpha];
+    UIColor* border = [_color colorWithAlphaComponent:0.6];
+    UIColor* grayshadow = [self lightenColor:border value:0.65];
+    UIColor* topColor = [self lightenColor:border value:0.37];
+    UIColor* midColor = [self lightenColor:border value:0.1];
+    UIColor* bottomColor = [self lightenColor:border value:0.12];
     
     //// Gradient Declarations
     NSArray* newGradientColors = [NSArray arrayWithObjects:
@@ -139,6 +146,42 @@ static CGFloat defaultWidth = 300.0;
     //// Cleanup
     CGGradientRelease(newGradient);
     CGColorSpaceRelease(colorSpace);
+}
+
+
+
+- (UIColor *)lightenColor:(UIColor *)oldColor value:(float)value {
+    int   totalComponents = CGColorGetNumberOfComponents(oldColor.CGColor);
+    bool  isGreyscale     = totalComponents == 2 ? YES : NO;
+    
+    CGFloat* oldComponents = (CGFloat *)CGColorGetComponents(oldColor.CGColor);
+    CGFloat newComponents[4];
+    
+    if (isGreyscale) {
+        newComponents[0] = oldComponents[0]+value > 1.0 ? 1.0 : oldComponents[0]+value;
+        newComponents[1] = oldComponents[0]+value > 1.0 ? 1.0 : oldComponents[0]+value;
+        newComponents[2] = oldComponents[0]+value > 1.0 ? 1.0 : oldComponents[0]+value;
+        newComponents[3] = oldComponents[1];
+    } else {
+        newComponents[0] = oldComponents[0]+value > 1.0 ? 1.0 : oldComponents[0]+value;
+        newComponents[1] = oldComponents[1]+value > 1.0 ? 1.0 : oldComponents[1]+value;
+        newComponents[2] = oldComponents[2]+value > 1.0 ? 1.0 : oldComponents[2]+value;
+        newComponents[3] = oldComponents[3];
+    }
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	CGColorRef newColor = CGColorCreate(colorSpace, newComponents);
+	CGColorSpaceRelease(colorSpace);
+    
+	UIColor *retColor = [UIColor colorWithCGColor:newColor];
+	CGColorRelease(newColor);
+    
+    return retColor;
+}
+    
+- (void) dealloc {
+    [_color release];
+    [super dealloc];
 }
 
 @end
