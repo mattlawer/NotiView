@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E2C6AEF15BF193B00964E0A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C6AEE15BF193B00964E0A /* icon.png */; };
+		4E9F81D315BF0DB500DDF872 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81D215BF0DB500DDF872 /* UIKit.framework */; };
+		4E9F81D515BF0DB500DDF872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81D415BF0DB500DDF872 /* Foundation.framework */; };
+		4E9F81D715BF0DB500DDF872 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81D615BF0DB500DDF872 /* CoreGraphics.framework */; };
+		4E9F81DD15BF0DB500DDF872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F81DB15BF0DB500DDF872 /* InfoPlist.strings */; };
+		4E9F81DF15BF0DB500DDF872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F81DE15BF0DB500DDF872 /* main.m */; };
+		4E9F81E315BF0DB500DDF872 /* NVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F81E215BF0DB500DDF872 /* NVAppDelegate.m */; };
+		4E9F81E615BF0DB500DDF872 /* NVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F81E515BF0DB500DDF872 /* NVViewController.m */; };
+		4E9F81E915BF0DB500DDF872 /* NVViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F81E715BF0DB500DDF872 /* NVViewController_iPhone.xib */; };
+		4E9F81EC15BF0DB500DDF872 /* NVViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9F81EA15BF0DB500DDF872 /* NVViewController_iPad.xib */; };
+		4E9F81F515BF0E2400DDF872 /* NotiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9F81F415BF0E2400DDF872 /* NotiView.m */; };
+		4E9F81F715BF0F4000DDF872 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81F615BF0F4000DDF872 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4E2C6AEE15BF193B00964E0A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4E9F81CE15BF0DB500DDF872 /* NotiView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E9F81D215BF0DB500DDF872 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4E9F81D415BF0DB500DDF872 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4E9F81D615BF0DB500DDF872 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4E9F81DA15BF0DB500DDF872 /* NotiView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotiView-Info.plist"; sourceTree = "<group>"; };
+		4E9F81DC15BF0DB500DDF872 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E9F81DE15BF0DB500DDF872 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E9F81E015BF0DB500DDF872 /* NotiView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotiView-Prefix.pch"; sourceTree = "<group>"; };
+		4E9F81E115BF0DB500DDF872 /* NVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVAppDelegate.h; sourceTree = "<group>"; };
+		4E9F81E215BF0DB500DDF872 /* NVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVAppDelegate.m; sourceTree = "<group>"; };
+		4E9F81E415BF0DB500DDF872 /* NVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVViewController.h; sourceTree = "<group>"; };
+		4E9F81E515BF0DB500DDF872 /* NVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVViewController.m; sourceTree = "<group>"; };
+		4E9F81E815BF0DB500DDF872 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NVViewController_iPhone.xib; sourceTree = "<group>"; };
+		4E9F81EB15BF0DB500DDF872 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NVViewController_iPad.xib; sourceTree = "<group>"; };
+		4E9F81F315BF0E2400DDF872 /* NotiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotiView.h; sourceTree = "<group>"; };
+		4E9F81F415BF0E2400DDF872 /* NotiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotiView.m; sourceTree = "<group>"; };
+		4E9F81F615BF0F4000DDF872 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E9F81CB15BF0DB500DDF872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9F81F715BF0F4000DDF872 /* QuartzCore.framework in Frameworks */,
+				4E9F81D315BF0DB500DDF872 /* UIKit.framework in Frameworks */,
+				4E9F81D515BF0DB500DDF872 /* Foundation.framework in Frameworks */,
+				4E9F81D715BF0DB500DDF872 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E9F81C315BF0DB500DDF872 = {
+			isa = PBXGroup;
+			children = (
+				4E9F81D815BF0DB500DDF872 /* NotiView */,
+				4E9F81D115BF0DB500DDF872 /* Frameworks */,
+				4E9F81CF15BF0DB500DDF872 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E9F81CF15BF0DB500DDF872 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E9F81CE15BF0DB500DDF872 /* NotiView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E9F81D115BF0DB500DDF872 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E9F81D215BF0DB500DDF872 /* UIKit.framework */,
+				4E9F81D415BF0DB500DDF872 /* Foundation.framework */,
+				4E9F81D615BF0DB500DDF872 /* CoreGraphics.framework */,
+				4E9F81F615BF0F4000DDF872 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E9F81D815BF0DB500DDF872 /* NotiView */ = {
+			isa = PBXGroup;
+			children = (
+				4E9F81F215BF0E2400DDF872 /* NotiView */,
+				4E9F81E115BF0DB500DDF872 /* NVAppDelegate.h */,
+				4E9F81E215BF0DB500DDF872 /* NVAppDelegate.m */,
+				4E9F81E415BF0DB500DDF872 /* NVViewController.h */,
+				4E9F81E515BF0DB500DDF872 /* NVViewController.m */,
+				4E9F81E715BF0DB500DDF872 /* NVViewController_iPhone.xib */,
+				4E9F81EA15BF0DB500DDF872 /* NVViewController_iPad.xib */,
+				4E9F81D915BF0DB500DDF872 /* Supporting Files */,
+			);
+			path = NotiView;
+			sourceTree = "<group>";
+		};
+		4E9F81D915BF0DB500DDF872 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E9F81DA15BF0DB500DDF872 /* NotiView-Info.plist */,
+				4E9F81DB15BF0DB500DDF872 /* InfoPlist.strings */,
+				4E9F81DE15BF0DB500DDF872 /* main.m */,
+				4E9F81E015BF0DB500DDF872 /* NotiView-Prefix.pch */,
+				4E2C6AEE15BF193B00964E0A /* icon.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E9F81F215BF0E2400DDF872 /* NotiView */ = {
+			isa = PBXGroup;
+			children = (
+				4E9F81F315BF0E2400DDF872 /* NotiView.h */,
+				4E9F81F415BF0E2400DDF872 /* NotiView.m */,
+			);
+			path = NotiView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E9F81CD15BF0DB500DDF872 /* NotiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E9F81EF15BF0DB500DDF872 /* Build configuration list for PBXNativeTarget "NotiView" */;
+			buildPhases = (
+				4E9F81CA15BF0DB500DDF872 /* Sources */,
+				4E9F81CB15BF0DB500DDF872 /* Frameworks */,
+				4E9F81CC15BF0DB500DDF872 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotiView;
+			productName = NotiView;
+			productReference = 4E9F81CE15BF0DB500DDF872 /* NotiView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E9F81C515BF0DB500DDF872 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NV;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Mathieu Bolard";
+			};
+			buildConfigurationList = 4E9F81C815BF0DB500DDF872 /* Build configuration list for PBXProject "NotiView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4E9F81C315BF0DB500DDF872;
+			productRefGroup = 4E9F81CF15BF0DB500DDF872 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E9F81CD15BF0DB500DDF872 /* NotiView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E9F81CC15BF0DB500DDF872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9F81DD15BF0DB500DDF872 /* InfoPlist.strings in Resources */,
+				4E9F81E915BF0DB500DDF872 /* NVViewController_iPhone.xib in Resources */,
+				4E9F81EC15BF0DB500DDF872 /* NVViewController_iPad.xib in Resources */,
+				4E2C6AEF15BF193B00964E0A /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E9F81CA15BF0DB500DDF872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9F81DF15BF0DB500DDF872 /* main.m in Sources */,
+				4E9F81E315BF0DB500DDF872 /* NVAppDelegate.m in Sources */,
+				4E9F81E615BF0DB500DDF872 /* NVViewController.m in Sources */,
+				4E9F81F515BF0E2400DDF872 /* NotiView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4E9F81DB15BF0DB500DDF872 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E9F81DC15BF0DB500DDF872 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4E9F81E715BF0DB500DDF872 /* NVViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E9F81E815BF0DB500DDF872 /* en */,
+			);
+			name = NVViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		4E9F81EA15BF0DB500DDF872 /* NVViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E9F81EB15BF0DB500DDF872 /* en */,
+			);
+			name = NVViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E9F81ED15BF0DB500DDF872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E9F81EE15BF0DB500DDF872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E9F81F015BF0DB500DDF872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NotiView/NotiView-Prefix.pch";
+				INFOPLIST_FILE = "NotiView/NotiView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4E9F81F115BF0DB500DDF872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NotiView/NotiView-Prefix.pch";
+				INFOPLIST_FILE = "NotiView/NotiView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E9F81C815BF0DB500DDF872 /* Build configuration list for PBXProject "NotiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E9F81ED15BF0DB500DDF872 /* Debug */,
+				4E9F81EE15BF0DB500DDF872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E9F81EF15BF0DB500DDF872 /* Build configuration list for PBXNativeTarget "NotiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E9F81F015BF0DB500DDF872 /* Debug */,
+				4E9F81F115BF0DB500DDF872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E9F81C515BF0DB500DDF872 /* Project object */;
+}
