@@ -45,10 +45,19 @@ static CGFloat offset = 20.0;
 
 - (IBAction)test:(id)sender {
     
-    NotiView *nv = [[NotiView alloc] initWithTitle:[self msgTitle] detail:[self msgDetail] icon:[UIImage imageNamed:@"icon"]];
+    /*//Old way
+     NotiView *nv = [[NotiView alloc] initWithTitle:[self msgTitle] detail:[self msgDetail] icon:[UIImage imageNamed:@"icon"]];*/
+    
+    //New way with custom width
+    NotiView *nv = [[NotiView alloc] initWithWidth:300];
+    [nv setTitle:[self msgTitle]];
+    [nv setDetail:[self msgDetail]];
+    [nv setIcon:[UIImage imageNamed:@"icon"]];
     if (_randomcolors.isOn) {
-        nv.color = [self randomColor];
+        [nv setColor:[self randomColor]];
     }
+    
+    // make sure it's out of the screen
     CGRect f = nv.frame;
     f.origin.x = [self viewWidth] - f.size.width - offset;
     f.origin.y = -f.size.height;

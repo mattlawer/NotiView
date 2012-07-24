@@ -9,11 +9,22 @@
 #import <UIKit/UIKit.h>
 
 @interface NotiView : UIView {
+    UIImageView *_iconView;
+    UILabel *_titleLabel;
+    UILabel *_detailLabel;
+    
     UIColor *_color;
+    CGGradientRef _gradient;
 }
-@property (nonatomic, assign) UIColor *color;
-- (id)initWithTitle:(NSString *)title detail:(NSString *)detail icon:(UIImage *)icon;
 
+@property (nonatomic, assign) UIColor *color;
+@property (nonatomic, assign) UIImage *icon;
+@property (nonatomic, assign) NSString *title;
+@property (nonatomic, assign) NSString *detail;
+
+- (id)initWithWidth:(CGFloat)width;
+- (id)initWithTitle:(NSString *)title detail:(NSString *)detail icon:(UIImage *)icon;
 - (UIColor *)lightenColor:(UIColor *)oldColor value:(float)value;
+- (void) updateHeight;
 
 @end
