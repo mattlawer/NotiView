@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E2C6AEF15BF193B00964E0A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C6AEE15BF193B00964E0A /* icon.png */; };
+		4E2C6B0115BFD41D00964E0A /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C6B0015BFD41D00964E0A /* NSTimer+Blocks.m */; };
 		4E9F81D315BF0DB500DDF872 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81D215BF0DB500DDF872 /* UIKit.framework */; };
 		4E9F81D515BF0DB500DDF872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81D415BF0DB500DDF872 /* Foundation.framework */; };
 		4E9F81D715BF0DB500DDF872 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9F81D615BF0DB500DDF872 /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		4E2C6AEE15BF193B00964E0A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4E2C6AFF15BFD41D00964E0A /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "NSTimer+Blocks/NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		4E2C6B0015BFD41D00964E0A /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "NSTimer+Blocks/NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		4E9F81CE15BF0DB500DDF872 /* NotiView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9F81D215BF0DB500DDF872 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4E9F81D415BF0DB500DDF872 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2C6AFD15BFD3E500964E0A /* NSTimer+Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C6AFF15BFD41D00964E0A /* NSTimer+Blocks.h */,
+				4E2C6B0015BFD41D00964E0A /* NSTimer+Blocks.m */,
+			);
+			name = "NSTimer+Blocks";
+			sourceTree = "<group>";
+		};
 		4E9F81C315BF0DB500DDF872 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		4E9F81D815BF0DB500DDF872 /* NotiView */ = {
 			isa = PBXGroup;
 			children = (
+				4E2C6AFD15BFD3E500964E0A /* NSTimer+Blocks */,
 				4E9F81F215BF0E2400DDF872 /* NotiView */,
 				4E9F81E115BF0DB500DDF872 /* NVAppDelegate.h */,
 				4E9F81E215BF0DB500DDF872 /* NVAppDelegate.m */,
@@ -191,6 +204,7 @@
 				4E9F81E315BF0DB500DDF872 /* NVAppDelegate.m in Sources */,
 				4E9F81E615BF0DB500DDF872 /* NVViewController.m in Sources */,
 				4E9F81F515BF0E2400DDF872 /* NotiView.m in Sources */,
+				4E2C6B0115BFD41D00964E0A /* NSTimer+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

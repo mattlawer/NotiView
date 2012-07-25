@@ -7,6 +7,7 @@
 //
 
 #import "NVViewController.h"
+#import "NSTimer+Blocks.h"
 #import "NotiView.h"
 
 static CGFloat offset = 20.0;
@@ -51,7 +52,7 @@ static CGFloat offset = 20.0;
     //New way with custom width
     NotiView *nv = [[NotiView alloc] initWithWidth:300];
     [nv setTitle:[self msgTitle]];
-    [nv setDetail:[self msgDetail]];
+    [nv setDetail:[self msgDetail]]; // this will update the nv height
     [nv setIcon:[UIImage imageNamed:@"icon"]];
     if (_randomcolors.isOn) {
         [nv setColor:[self randomColor]];
@@ -67,12 +68,13 @@ static CGFloat offset = 20.0;
     [UIView animateWithDuration:0.4 animations:^{
         nv.frame = CGRectOffset(nv.frame, 0.0, f.size.height+offset);
     } completion:^(BOOL finished) {
-        sleep(1); //just for the example don't do that to the thread :(
-        [UIView animateWithDuration:0.4 animations:^{
-            nv.frame = CGRectOffset(nv.frame, f.size.width+offset, 0.0);
-        } completion:^(BOOL finished) {
-            [nv removeFromSuperview];
-            [nv release];
+        [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:NO block:^(NSTimer *timer) {
+            [UIView animateWithDuration:0.4 animations:^{
+                nv.frame = CGRectOffset(nv.frame, f.size.width+offset, 0.0);
+            } completion:^(BOOL finished) {
+                [nv removeFromSuperview];
+                [nv release];
+            }];
         }];
     }];
     
