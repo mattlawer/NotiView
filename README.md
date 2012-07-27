@@ -6,7 +6,7 @@ You could choose the icon, title, description and even the tint color of the vie
 It works with iPhone, iPod Touch or iPad, with retina display or not.<br />
 The view is dynamically resized according to the detail text length.<br />
 
-<img width=300 src="http://img94.imageshack.us/img94/5396/capturedcrandusimulateu.png"/>  <img width=300 src="http://img526.imageshack.us/img526/5396/capturedcrandusimulateu.png"/>
+<img width=300 src="http://img94.imageshack.us/img94/5396/capturedcrandusimulateu.png"/> &nbsp; <img width=300 src="http://img526.imageshack.us/img526/5396/capturedcrandusimulateu.png"/>
 
 
 Usage
