@@ -71,6 +71,7 @@ static CGFloat maxHeight = 168.0;
     [self addSubview:_iconView];
     
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(90.0, 22.0, self.frame.size.width-120.0, 24.0)];
+    _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _titleLabel.backgroundColor = [UIColor clearColor];
     _titleLabel.textColor = [UIColor whiteColor];
     _titleLabel.shadowColor = [UIColor blackColor];
@@ -79,6 +80,7 @@ static CGFloat maxHeight = 168.0;
     [self addSubview:_titleLabel];
     
     _detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(90.0, 52.0, self.frame.size.width-120.0, 20.0)];
+    _detailLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _detailLabel.backgroundColor = [UIColor clearColor];
     _detailLabel.textColor = [UIColor lightGrayColor];
     _detailLabel.shadowColor = [UIColor blackColor];
@@ -141,6 +143,15 @@ static CGFloat maxHeight = 168.0;
     return [_detailLabel text];
 }
 
+- (void) setWidth:(CGFloat)width {
+    CGRect f = self.frame;
+    f.size.width = width;
+    [self setFrame:f];
+    [self updateHeight];
+}
+- (CGFloat) width {
+    return self.bounds.size.width;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

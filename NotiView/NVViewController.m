@@ -46,10 +46,15 @@ static CGFloat offset = 20.0;
 
 - (IBAction)test:(id)sender {
     
-    /*//Old way
-     NotiView *nv = [[NotiView alloc] initWithTitle:[self msgTitle] detail:[self msgDetail] icon:[UIImage imageNamed:@"icon"]];*/
+    /*//Fast way
+    NotiView *nv = [[NotiView alloc] initWithTitle:[self msgTitle] detail:[self msgDetail] icon:[UIImage imageNamed:@"icon"]];
+    [nv setWidth:280.0];
+    if (_randomcolors.isOn) {
+        [nv setColor:[self randomColor]];
+    }
+    */
     
-    //New way with custom width
+    //Line by line way
     NotiView *nv = [[NotiView alloc] initWithWidth:300];
     [nv setTitle:[self msgTitle]];
     [nv setDetail:[self msgDetail]]; // this will update the nv height
