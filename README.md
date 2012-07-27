@@ -53,7 +53,7 @@ Usage
 Example
 -------
 
-With some sandoms strings and colors
+With some randoms strings and colors
 
 <img width=320 src="http://img12.imageshack.us/img12/5396/capturedcrandusimulateu.png"/>
 
