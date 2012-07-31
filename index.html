@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>NotiView by mattlawer</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>NotiView</h1>
+        <p>A CoreGraphics notification view inspired by @iHaz3 &amp; @abart997</p>
+        <p class="view"><a href="https://github.com/mattlawer/NotiView">View the Project on GitHub <small>mattlawer/NotiView</small></a></p>
+        <ul>
+          <li><a href="https://github.com/mattlawer/NotiView/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mattlawer/NotiView/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mattlawer/NotiView">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>NotiView</h1>
+
+<p>NotiView is a CoreGraphics notification view inspired by <a href="https://github.com/iHaz3" class="user-mention">@iHaz3</a> &amp; <a href="https://github.com/abart997" class="user-mention">@abart997</a>.<br>
+You could choose the icon, title, description and even the tint color of the view.<br>
+It works with iPhone, iPod Touch or iPad, with retina display or not.<br>
+The view is dynamically resized according to the detail text length.<br></p>
+
+<p><img width="300" src="http://img94.imageshack.us/img94/5396/capturedcrandusimulateu.png">   <img width="300" src="http://img526.imageshack.us/img526/5396/capturedcrandusimulateu.png"></p>
+
+<h2>Usage</h2>
+
+<p>1) Create the notification view.</p>
+
+<pre><code>// With default width (300.0f)
+NotiView *nv = [[NotiView alloc] initWithTitle:@"Title" detail:@"detail" icon:[UIImage imageNamed:@"icon"]];
+
+// Or create it with the width you need
+NotiView *nv = [[NotiView alloc] initWithWidth:300];
+[nv setTitle:@"Title"];
+[nv setDetail:@"detail"]; // this will update the nv height
+[nv setIcon:[UIImage imageNamed:@"icon"]];
+[nv setColor:[UIColor purpleColor]];
+</code></pre>
+
+<p>2) Add the notification view to a superview</p>
+
+<pre><code>// make sure the notification view is out of the screen to animate it
+CGRect f = nv.frame;
+f.origin.x = [self viewWidth] - f.size.width - offset;
+f.origin.y = -f.size.height;
+nv.frame = f;
+[self.view addSubview:nv];
+</code></pre>
+
+<p>3) Animate the view </p>
+
+<pre><code>// show the notification view
+[UIView animateWithDuration:0.4 animations:^{
+    nv.frame = CGRectOffset(nv.frame, 0.0, f.size.height+20.0);
+} completion:^(BOOL finished) {
+
+    // hide the view
+    [UIView animateWithDuration:0.4 animations:^{
+        nv.frame = CGRectOffset(nv.frame, f.size.width+20.0, 0.0);
+    } completion:^(BOOL finished) {
+        [nv removeFromSuperview];
+        [nv release];
+    }];
+}];
+</code></pre>
+
+<h2>Example</h2>
+
+<p>With some randoms strings and colors</p>
+
+<p><img width="320" src="http://img12.imageshack.us/img12/5396/capturedcrandusimulateu.png"></p>
+
+<h2>License</h2>
+
+<p>Copyright (c) 2012, Mathieu Bolard
+All rights reserved.</p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<ul>
+<li><p>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p></li>
+<li><p>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p></li>
+<li><p>Neither the name of Mathieu Bolard, mattlawer nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</p></li>
+</ul><p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Mathieu Bolard BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+<h2>Contact</h2>
+
+<p><a href="mailto:mattlawer08@gmail.com">mattlawer08@gmail.com</a><br><a href="http://mathieubolard.com">http://mathieubolard.com</a><br><a href="http://twitter.com/mattlawer">http://twitter.com/mattlawer</a></p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/mattlawer">mattlawer</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
